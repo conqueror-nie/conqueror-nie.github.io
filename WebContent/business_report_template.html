@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head class="outHtml">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>searchin-商情报告</title>
+    <style type="text/css">
+		html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td,
+		article, aside, canvas, details, embed,
+		figure, figcaption, footer, header, hgroup,
+		main, menu, nav, output, ruby, section, summary,
+		time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			vertical-align: baseline;
+		}
+		article, aside, details, figcaption, figure,
+		footer, header, hgroup, main, menu, nav, section {
+			display: block;
+		}
+		ol, ul , li{
+			list-style: none;
+		}
+		blockquote, q {
+			quotes: none;
+		}
+		blockquote:before, blockquote:after,
+		q:before, q:after {
+			content: '';
+			content: none;
+		}
+		
+		a:hover, a:active {
+		    outline: none;
+		}
+		
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+		
+		body {line-height: 1;  font-family: "Microsoft YaHei", "微软雅黑", Arial,Helvetica,SimSun, "宋体", "华文细黑", Heiti, "黑体", sans-serif; font-size: 14px; color: #333;"onselectstart="return false;background: #ebeff6}
+		img{border:0}
+		h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+		select,input{vertical-align:middle}
+		a{color:#333;text-decoration:none;-webkit-tap-highlight-color: rgba(255,255,255,0.1);}
+    	.w{
+			width: 1200px;
+			background: #fff;
+			-webkit-border-radius: 2px;
+			-moz-border-radius: 2px;
+			border-radius: 2px;
+			box-shadow: 0px 0px 22.32px 1.68px rgba(185, 191, 205, 0.26);
+			padding-bottom: 100px;
+			overflow: hidden;
+			margin: 0 auto;
+			margin-top: 10px;
+		}
+		.wrap{width: 100%;padding-bottom: 73px;}
+		.busin-text{
+		    color: #5e71a0;
+		    font-size: 14px;
+		    margin-top: 2px;
+		    display: inline-block;
+		}
+		.editbefore-btn,.editprestored-btn{
+		    float: right;
+		    margin-right: 18px;
+		    background-size: 1px 100%;
+		    width: 119px;
+		    height: 43px;
+		    line-height: 43px;
+		    border: 1px solid #e6eaef;
+		    color: #5e71a0;
+		    font-size: 14px;
+		    margin-top: 22px;
+		    text-align: center;
+		    cursor: pointer;
+		}
+		.busin-main{
+		    padding: 25px 25px 0;
+		    box-sizing: border-box;
+		}
+		.busin-main h2{
+		    font-size: 18px;
+		    color: #666666;
+		    border-left: 3px solid #57b4ec;
+		    padding-left: 20px;
+		}
+		.margintop35{
+		    margin-top: 35px;
+		}
+		.busin-main p{
+		    box-sizing: border-box;
+		    font-size: 14px;
+		    color: #666666;
+		    line-height: 2;
+		    margin-top: 20px;
+		    width: 1150px;
+		    resize: none;
+		    border: none;
+		    outline:none;
+		    height: 40px;
+		}
+		.pic_1{
+			width:860px;
+			height:380px;
+			border: 1px solid #aaa;
+		}
+		.pic_2{
+			width:551px;
+			height:380px;
+			float:left;
+			border: 1px solid #aaa;
+		}
+		
+		.Publication_trend{
+			width:840px;
+			height:365px;
+			padding:10px 5px 10px 10px;
+		}
+		.Media_type_release_statistics{
+			width:520px;
+			height:360px;
+			padding:10px 21px 10px 10px;
+			
+		}
+		.Baidu_media_type{
+			width:300px;
+			height:360px;
+			padding:10px 241px 10px 10px;
+		}
+		.Regional_heat_map{
+			width:430px;
+			height:270px;
+			padding:10px 111px 100px 10px;
+		}
+		.City_level_statistics{
+			width:430px;
+			height:320px;
+			padding:10px 111px 50px 10px;
+		}
+		.Emotional_type_scale{
+			width:520px;
+			height:360px;
+			padding:10px 21px 10px 10px;
+		}
+		.Mood_type_trend_chart{
+			width:520px;
+			height:360px;
+			padding:10px 41px 10px 10px;
+		}
+		.clear{
+		    clear: both;
+		}
+		.busin-content{
+		    margin-top: 40px;
+		}
+		.busin-title{
+		    padding-left: 20px;
+		    box-sizing: border-box;
+		}
+		.busin-title .number{
+		    width: 38px;
+		    height: 38px;
+		    border-radius: 50px;
+		    background: #57b4ec;
+		    color: #FFFfff;
+		    font-size: 18px;
+		    line-height: 38px;
+		    text-align: center;
+		    display: inline-block;
+		}
+		.busin-title .wa-text{
+		    margin-left:15px ;
+		    font-size: 18px;
+		    color: #333333;
+		    font-weight: bold;
+		    text-decoration: underline;
+		}
+		.busin-title .wa-url{
+		    margin-left:15px ;
+		    font-size: 18px;
+		    color: #333333;
+		    font-weight: bold;
+		}
+		.busin-top{
+		    margin: 0 0 45px 0;
+		    border-bottom: 1px solid #e5e5e5;
+		    margin-left:73px ;
+		   
+		}
+		.bus-text{
+		    float: left;
+		    padding-left: 25px;
+		    display: inline-block;
+		    color: #666666;
+		    font-size: 14px;
+		    margin-top: 33px;
+		}
+		.bus-box{
+		    float: left;
+		    width: 100px;
+		    height: 80px;
+		    background: #FFFfff;
+		    border: 1px solid #eeeeee;
+		    border-radius: 5px;
+		    text-align: center;
+		    margin-left: 20px;
+		}
+		.bus-box h3{
+		    color: #57b4ec;
+		    font-size: 24px;
+		    margin-top: 15px;
+		}
+		.bus-box p{
+		    color: #666666;
+		    font-size: 12px;
+		    margin-top: 14px;
+		    padding: 0;
+		    width: auto;
+		    height: auto;
+		}
+		.marginleft65{
+		    margin-left: 65px;
+		}
+		.bus-title{
+		    margin-left: 23px;
+		}
+		.bus-title p{
+		    background: left top;
+		    padding-left: 30px;
+		}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="component">
+            <div class="w">
+                <div class="busin-main">
+                    <img src="images/business_pic1.jpg">
+                    <h2 class="margintop35">综述</h2>
+                    <p>思奇无限 聚合商情效能 释放数据价值</p>
+                </div>
+            </div>
+            <div class="w">
+                <div class="busin-main">
+                    <h2>图表</h2>
+                    <div class="">
+                        <div class="pic_1">
+                        <div class="Publication_trend">
+                             <img src="images/Publication_trend.png">
+                        </div>
+                    </div>
+                    <div  class="pic_2">
+                        <div class="Media_type_release_statistics"> 
+                        	<img src="images/Media_type_release_statistics.png">
+                        </div>
+                    </div>
+                    <div class="pic_2">
+                        <div class="Baidu_media_type"> 
+                        	<img src="images/Baidu_media_type.png">
+                        </div>
+                    </div>
+                    <div class="pic_2">
+                        <div class="Regional_heat_map"> 
+                        	<img src="images/City_level_statistics.png">
+                        </div>
+                    </div>
+                    <div class="pic_2">
+                        <div class="City_level_statistics"> 
+                        	<img src="images/Regional_heat_map.png">
+                        </div>
+                    </div>
+                    <div class="pic_2">
+                        <div class="Mood_type_trend_chart"> 
+                        	<img src="images/Emotional_type_scale.png">
+                        </div>
+                    </div>
+                    <div class="pic_2">
+                        <div class="Emotional_type_scale"> 
+                        	<img src="images/Mood_type_trend_chart.png" style="width: 500px; height: 360px;">
+                        </div>
+                    </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="w">
+                <div class="busin-main">
+                    <h2>新闻详情</h2>
+                    <div class="busin-content businNew">
+                        <div class="busin-cont">
+                            <div class="busin-title">
+                                <span class="wa-text"><a class="waTextLink" href="" target="view_window">新闻名称</a> </span>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="busin-top">
+                                <span class="bus-text">转载收录统计：  </span>
+                                <div class="bus-box">
+                                    <h3>0篇</h3>
+                                    <p>总转载量</p>
+                                </div>
+                                <div class="bus-box">
+                                    <h3>0家</h3>
+                                    <p>百度新闻收录</p>
+                                </div>
+                                <span class="bus-text marginleft65">主要收录媒体： </span>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w">
+                <div class="busin-main">
+                    <h2>新闻截图</h2>
+                    <div class="busin-content">
+                        <div class="busin-cont">
+                            <div class="bus-title">
+                                <p>截图名称</p>
+                            </div>
+                            <div class="busin-top">
+                                <img src="images/business_pic6.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

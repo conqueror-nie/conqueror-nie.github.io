@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>searchin-分析汇报</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/report.css"/>
+    <link rel="stylesheet" href="js/pickerDateRange/dateRange.css" />
+</head>
+<body>
+    <div class="wrap">
+        <div class="head">
+            <div class="head_wrap">
+                <div class="opa">
+                    <a href="javascript:void(0)" class="user"><img src="images/head_icon.png"/> <span class="userName" id='userNameId'></span></a>
+                    <a href="javascript:void(0)" class="user out"><img src="images/head_out.png"/> 退出登录</a>
+                </div>
+                <div class="logo"><a href="report.html"><img src="images/logo.png"/> </a> </div>
+                <div class="nav">
+                    <ul>
+                        <li class="on"><a href="report.html"><span>分析汇报</span></a> </li>
+                        <li><a href="analysis.html"><span>溯源分析</span></a> </li>
+                        <li><a href="business_report.html"><span>商情报告</span></a> </li>
+                        <li><a href="monitor_platform.html"><span>监测平台</span></a> </li>
+                        <li><a href="set.html"><span>系统管理</span></a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kong"></div>
+        <div class="b_title">
+            <div class="topic">
+                <span>话题切换<img src="images/b_icon.png"/></span>
+            </div>
+            <div class="switch">
+                <div class="switch_radio">
+                </div>
+                <div class="edit_opa">
+                    <a href="javascript:void(0)" class="opa submit topicSubmit">提交</a>
+                    <a href="javascript:void(0)" class="opa cancel topicCancle">取消</a>
+                </div>
+            </div>
+            <p class="showTopic">请创建话题</p>
+        </div>
+        <div class="total">
+            <div class="topic_total topicday">
+                <h2>0</h2>
+                <p>昨日话题总量</p>
+            </div>
+            <div class="topic_total seven topicWeek">
+                <h2>0</h2>
+                <p>七日话题总量</p>
+            </div>
+            <div class="topic_total month topicMonth">
+                <h2>0</h2>
+                <p>本月话题总量</p>
+            </div>
+        </div>
+        <!--发布总量对比-->
+        <div class="w typeNum" data_type="num">
+            <div class="pub-tit">
+                <h3 class="pub-tit-txt">发布总量对比:</h3>
+                <div class="pub-right">
+                    <ul class="pub-date">
+                        <li class="pub-date-cur pubDateItem" data_id="1">日</li>
+                        <li class="pubDateItem" data_id="2">周</li>
+                        <li class="pubDateItem" data_id="3">月</li>
+                    </ul>
+                    <div class="pub-choice-date" id="div_date_demo2">
+                        <a class="pub-choice-date-icon"></a>
+                        <input id="date_demo2" class="date_demo" placeholder="请选择日期区间" data_id="4"/>
+                    <div class="clear"></div>
+                    </div>
+                    <!-- <div class="pub-download"><em class="pub-download-icon"></em>下载</div> -->
+                </div>
+            </div>
+            <div class="chart-box margintop35">
+                <div class="chart-left width1 totalNumChart">
+                </div>
+                <div class="kong"></div>
+                <div class="data_total">
+                    <div class="total_tit"><a href="javascript:void(0)" class="total_edit">编辑</a><span>发布量对比</span></div>
+                    <div class="edit_sele">
+                        <div class="editSeleCont">
+                        </div>
+                        <div class="edit_opa">
+                            <a href="javascript:void(0)" class="opa submit editSeleSubmit">提交</a>
+                            <a href="javascript:void(0)" class="opa cancel">取消</a>
+                        </div>
+                    </div>
+                    <div class="t_num totalNum">
+                      <!--   <p class="totalItem"><span class="num blue">34,563</span><span class="totalItemName">乐视会员网络直播</span></p> -->
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!--按媒体类型-->
+        <div class="w typeMedia" data_type="media">
+            <div class="pub-tit">
+                <h3 class="pub-tit-txt">按媒体类型:</h3>
+                <div class="pub-right">
+                    <ul class="pub-date">
+                        <li class="pub-date-cur pubDateItem" data_id="1">日</li>
+                        <li class="pubDateItem" data_id="2">周</li>
+                        <li class="pubDateItem" data_id="3">月</li>
+                    </ul>
+                    <div class="pub-choice-date" id="div_date_demo3">
+                        <a class="pub-choice-date-icon"></a>
+                        <input id="date_demo3" class="date_demo" data_id="4" placeholder="请选择日期区间"/>
+                        <div class="clear"></div>
+                    </div>
+                    <!--<div class="pub-download"><em class="pub-download-icon"></em>下载</div>-->
+                </div>
+            </div>
+            <div class="chart-box margintop35">
+                <div class="chart-left width2 mediaType">
+                    <!-- <div class="width_tit">媒体类型发布量统计</div>
+                    <img src="images/report_pic2.jpg"> -->
+                </div>
+                <div class="chart-left width3 baiduType">
+                   <!--  <div class="width_tit">百度媒体类型统计</div>
+                    <img src="images/report_pic3.jpg"> -->
+                </div>
+                <div class="data_total">
+                    <div class="total_tit"><span>媒体发布排行</span></div>
+                    <div class="t_num mediaItemWrap">
+                        <!-- <dl class="mediaItem">
+                            <dt class="bg_01 bgItem">01</dt>
+                            <dd class="mediaItemCont">
+                                <h2 class="mediaItemName">新浪</h2>
+                                <p class="mediaItemNum">34,567</p>
+                            </dd>
+                        </dl> -->
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!--按地域类型-->
+        <div class="w typeArea" data_type="area">
+            <div class="pub-tit">
+                <h3 class="pub-tit-txt">按地域类型:</h3>
+                <div class="pub-right">
+                    <ul class="pub-date">
+                        <li class="pub-date-cur pubDateItem" data_id="1">日</li>
+                        <li class="pubDateItem" data_id="2">周</li>
+                        <li class="pubDateItem" data_id="3">月</li>
+                    </ul>
+                    <div class="pub-choice-date" id="div_date_demo1">
+                        <a class="pub-choice-date-icon"></a>
+                        <input id="date_demo1" class="date_demo" data_id="4" placeholder="请选择日期区间"/>
+                        <div class="clear"></div>
+                    </div>
+                    <!--<div class="pub-download"><em class="pub-download-icon"></em>下载</div>-->
+                </div>
+            </div>
+            <div class="chart-box margintop35">
+                <div class="chart-left width4" id="main_map" style="height:500px;width:600px; border-style: solid; border-width: 1px; border-color:#aaa">
+                    <div class="width_tit">全国区域热度统计</div>
+                    <!-- <img src="images/report_pic4.jpg">  -->
+                </div>
+                <div class="chart-left width5 pieAreaType">
+                 <!--    <div class="width_tit"></div>
+                    <img src="images/report_pic5.jpg"> -->
+                </div>
+                <div class="chart-left width6 cityType">
+              <!--       <div class="width_tit">城市级别统计</div>
+                    <img src="images/report_pic6.jpg"> -->
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="city slideTxtBox">
+                <div class="city_tit hd">
+                    <ul class="tab">
+                        <li class="on slideListItem" city_id="1"><a href="javascript:void(0)">一线城市</a> </li>
+                        <li class="slideListItem" city_id="2"><a href="javascript:void(0)">二线城市</a> </li>
+                        <li class="slideListItem" city_id="3"><a href="javascript:void(0)">三线城市</a> </li>
+						<li class="slideListItem" city_id="4"><a href="javascript:void(0)">四线城市</a> </li>
+						<li class="slideListItem" city_id="5"><a href="javascript:void(0)">五线城市</a> </li>
+                    </ul>
+                    <h2 class="citySubTime">
+                        城市级别细分<span class="cityTSubitle"></span>
+                    </h2>
+                </div>
+                <div class="bd">
+                    <ul>
+                        <div class="city_pic citySubType">
+                          <!-- <img src="images/report_pic7.jpg"> -->
+                        </div>
+                    </ul>
+                   <!--  <ul>
+                        <div class="city_pic"><img src="images/report_pic7.jpg"></div>
+                    </ul>
+                    <ul>
+                        <div class="city_pic"><img src="images/report_pic7.jpg"></div>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+        <!--按情感类型-->
+        <div class="w typeEmotion" data_type="emotion">
+            <div class="pub-tit">
+                <h3 class="pub-tit-txt">按情感类型:</h3>
+                <div class="pub-right">
+                    <ul class="pub-date">
+                        <li class="pub-date-cur pubDateItem" data_id="1">日</li>
+                        <li class="pubDateItem" data_id="2">周</li>
+                        <li class="pubDateItem" data_id="3">月</li>
+                    </ul>
+                    <div class="pub-choice-date" id="div_date_demo4">
+                        <a class="pub-choice-date-icon"></a>
+                        <input id="date_demo4" class="date_demo" data_id="4" placeholder="请选择日期区间"/>
+                        <div class="clear"></div>
+                    </div>
+                    <!--<div class="pub-download"><em class="pub-download-icon"></em>下载</div>-->
+                </div>
+            </div>
+            <div class="chart-box margintop35">
+                <div class="chart-left width7 emotionMediaType">
+                    <!-- <img src="images/report_pic2.jpg"> -->
+                </div>
+                <div class="chart-left width8 emotionType">
+                   <!--  <img src="images/report_pic9.jpg">
+                    <div class="tab">
+                        <ul>
+                            <li class="active"><img src="images/business_tab-icon1.png"></li>
+                            <li><img src="images/business_tab-icon2.png"></li>
+                        </ul>
+                    </div> -->
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!--数据摘要-->
+        <div class="w typeData" data_type="data">
+            <div class="pub-tit">
+                <h3 class="pub-tit-txt">数据摘要</h3>
+                <div class="pub-right">
+                    <ul class="pub-date">
+                        <li class="pub-date-cur pubDateItem" data_id="1">日</li>
+                        <li class="pubDateItem" data_id="2">周</li>
+                        <li class="pubDateItem" data_id="3">月</li>
+                    </ul>
+                    <div class="pub-choice-date" id="div_date_demo5">
+                        <a class="pub-choice-date-icon"></a>
+                        <input id="date_demo5" class="date_demo" data_id="4" placeholder="请选择日期区间"/>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="pub-download"><em class="pub-download-icon" title="下载"></em></div>
+                </div>
+            </div>
+            <div class="chart-box margintop35 dataContainer">
+                 <div class="data_describe">
+                     <h2 class="dataItemTitle">
+                        <a class="dataItemLink" href="" target="view_window"></a>
+                      </h2>
+                     <p class="dataItemDes"></p>
+                     <p class="dataItemMain">
+                     <span class="dataItemTime"></span>
+                     <span class="dataItemSize"></span>
+                     <span class="dataItemCity"></span>
+                     <span class="dataItemNum"></span>
+                     </p>
+                 </div>
+            </div>
+            <!-- 页码 -->
+            <div class="page">
+                <ul class="pageWrap">
+                    <p class="totals">共&nbsp;<span class="pageAccount">0</span>&nbsp;条</p>
+                    <select class="show_page">
+                        <option value="10" selected="selected">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                    <p class="pageSetting up">上一页</p>
+                    <ul class="pageCont">
+                        <div class="pageWidth">
+                             <li class="pageItem on next" data_index="true">1</li>
+                        </div>
+                       
+                    </ul>
+                    <p class="pageSetting next">下一页</p>
+                    <div class="goPage">
+                        <span class="goPageChat">跳转到:</span>
+                        <input type="text" name="pageNum" class="goPageNum">
+                        <span class="goPageClick">Go</span>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript" src="js/publicObj.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/echarts.min.js"></script>
+<script type="text/javascript" src="js/echarts.js"></script>
+<!-- <script type="text/javascript" src="js/global.js"></script> -->
+<script src="js/pickerDateRange/dateRange.js"></script>
+<script type="text/javascript" src="js/report.js"></script>
+    <script src="js/jquery.SuperSlide.2.1.1.js"></script>
+</body>
+</html>

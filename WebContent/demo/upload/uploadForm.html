@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- 静态文件css,js等放在static目录下 -->
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            alert("Upload File Page");
+        });
+    </script>
+</head>
+<body>
+<div>
+    <form method="POST" enctype="multipart/form-data" action="/file/upload">
+        <table>
+            <tr><td>File to upload:</td><td><input type="file" name="file"  accept="image/*"/></td></tr>
+            <tr><td></td><td><input type="submit" value="Upload" /></td></tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

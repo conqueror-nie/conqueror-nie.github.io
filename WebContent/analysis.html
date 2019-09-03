@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>searchin-溯源分析</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/analysis.css"/>
+    <link rel="stylesheet" href="js/pickerDateRange/dateRange.css" />
+</head>
+<body>
+    <div class="wrap">
+        <div class="head">
+            <div class="head_wrap">
+                <div class="opa">
+                  <a href="javascript:void(0)" class="user"><img src="images/head_icon.png"/> <span class="userName" id='userNameId'></span></a>
+                    <a href="javascript:void(0)" class="user out"><img src="images/head_out.png"/> 退出登录</a>
+                </div>
+                <div class="logo"><a href="report.html"><img src="images/logo.png"/> </a> </div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="report.html"><span>分析汇报</span></a> </li>
+                        <li class="on"><a href="analysis.html"><span>溯源分析</span></a> </li>
+                        <li><a href="business_report.html"><span>商情报告</span></a> </li>
+                        <li><a href="monitor_platform.html"><span>监测平台</span></a> </li>
+                        <li><a href="set.html"><span>系统管理</span></a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+		<div class="kong"></div>
+        <div class="b_title">
+            <div class="topic">
+                <span>话题切换<img src="images/b_icon.png"/></span>
+            </div>
+            <div class="switch">
+                <div class="switch_radio">
+                </div>
+                <div class="edit_opa">
+                    <a href="javascript:void(0)" class="opa submit topicSubmit">提交</a>
+                    <a href="javascript:void(0)" class="opa cancel topicCancle">取消</a>
+                </div>
+            </div>
+            <p class="showTopic">请创建话题</p>
+        </div>
+        <!---->
+        <div class="w selectData" data_type="select">
+            <div class="t_left">
+               <div class="in_pub">
+                   <div class="pub dataTimeType" select_type="time">
+                       <div class="pub_t">时间</div>
+                       <div class="pub_con">
+                           <ul class="pub-date pub_date22">
+                               <li class="pub-date-cur pubDateItem" data_id="1">日</li>
+                               <li class="pubDateItem" data_id="2">周</li>
+                               <li class="pubDateItem" data_id="3">月</li>
+                           </ul>
+                           <div class="pub-choice-date" id="div_date_demo3">
+                               <a class="pub-choice-date-icon"></a>
+                               <input id="date_demo3" data_id="4" class="date_demo" placeholder="请选择日期区间">
+                               <div class="clear"></div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="pub" select_type="media">
+                       <div class="pub_t">媒体</div>
+                       <div class="pub_con">
+                           <ul class="pub-date">
+                               <li class="pub-date-cur pubDateItem" data_id="1">权重</li>
+                               <li class="pubDateItem" data_id="2">普通</li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="pub" select_type="baidu">
+                       <div class="pub_t">百度</div>
+                       <div class="pub_con">
+                           <ul class="pub-date">
+                               <li class="pub-date-cur pubDateItem" data_id="1">百度新闻</li>
+                               <li class="pubDateItem" data_id="2">百度网页</li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="pub" select_type="emotion">
+                       <div class="pub_t">情感</div>
+                       <div class="pub_con">
+                           <ul class="pub-date">
+                               <li class="pub-date-cur pubDateItem" data_id="1">正面</li>
+                               <li class="pubDateItem" data_id="2">中立</li>
+                               <li class="pubDateItem" data_id="3">负面</li>
+                           </ul>
+                       </div>
+                   </div>
+                   <div class="pub" select_type="city">
+                       <div class="pub_t">城市</div>
+                       <div class="pub_con">
+                           <ul class="pub-date">
+                               <li class="pub-date-cur pubDateItem" data_id="1">一线</li>
+                               <li class="pubDateItem" data_id="2">二线</li>
+                               <li class="pubDateItem" data_id="3">三线</li>
+							   <li class="pubDateItem" data_id="4">四线</li>
+							   <li class="pubDateItem" data_id="5">五线</li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+                <div class="operate">
+                    <a href="javascript:void(0)" class="op_btn submit selectSubmit">提交</a>
+                    <a href="javascript:void(0)" class="op_btn reset">重置</a>
+                </div>
+            </div>
+            <div class="t_right">
+                <div class="r_tit">
+                    <!--<div class="pub-download no_sty"><em class="pub-download-icon"></em>下载</div>-->
+                </div>
+                <div class="r_pic_de">
+                    <h2 class="r_total analysisObj">
+                        <span class="analysisNum">0</span><label>当前溯源总量</label>
+                    </h2>
+                    <div class="chart_d leidaChat">
+                        <!-- <img src="images/analysis_pic1.jpg"/> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w padding_top20 chartData" data_type="chart">
+            <div class="pub-tit">
+                <h3 class="pub-tit-txt">发布总量对比:</h3>
+                <div class="pub-right">
+                    <ul class="pub-date dataTimeType">
+                        <li class="pub-date-cur pubDateItem" data_id="1">日</li>
+                        <li class="pubDateItem" data_id="2">周</li>
+                        <li class="pubDateItem" data_id="3">月</li>
+                    </ul>
+                    <div class="pub-choice-date" id="div_date_demo2">
+                        <a class="pub-choice-date-icon"></a>
+                        <input id="date_demo2" class="date_demo" data_id="4"  placeholder="请选择日期区间"/>
+                        <div class="clear"></div>
+                    </div>
+                    <!--<div class="pub-download"><em class="pub-download-icon"></em>下载</div>-->
+                </div>
+            </div>
+            <div class="chart_char">
+                <div class="chart-box margintop35">
+                    <div class="chart-right mediaType">
+                     <!--  <img src="images/analysis_pic2.jpg"> -->
+                    </div>
+                    <div class="chart-left">
+                       <!--  <h2 class="chart_name">媒体</h2> -->
+                        <div class="mediaTypeLine">
+                          
+                        </div>
+                       <!--  <img src="images/analysis_pic3.jpg"> -->
+					   <!--
+                        <div class="tab">
+                            <ul>
+                                <li class="active"><img src="images/business_tab-icon1.png"></li>
+                                <li><img src="images/business_tab-icon2.png"></li>
+                            </ul>
+                        </div>
+						-->
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="chart-box margintop35">
+                    <div class="chart-right baiduHistogram">
+                      <!-- <img src="images/analysis_pic2.jpg"> -->
+                    </div>
+                    <div class="chart-left">
+                        <!-- <h2 class="chart_name">百度</h2> -->
+                        <div class="baiduLiner">
+                          
+                        </div>
+                       <!--  <img src="images/analysis_pic3.jpg"> -->
+					   <!--
+                        <div class="tab">
+                            <ul>
+                                <li class="active"><img src="images/business_tab-icon1.png"></li>
+                                <li><img src="images/business_tab-icon2.png"></li>
+                            </ul>
+                        </div>
+						-->
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="chart-box margintop35">
+                    <div class="chart-right SesiHistogram">
+                      <!-- <img src="images/analysis_pic2.jpg"> -->
+                    </div>
+                    <div class="chart-left">
+                        <!-- <h2 class="chart_name">情感</h2> -->
+                        <!-- <img src="images/analysis_pic3.jpg"> -->
+                        <div class="sesiLine"></div>
+						<!--
+                        <div class="tab">
+                            <ul>
+                                <li class="active"><img src="images/business_tab-icon1.png"></li>
+                                <li><img src="images/business_tab-icon2.png"></li>
+                            </ul>
+                        </div>
+						-->
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="chart-box margintop35">
+                    <div class="chart-right cityHistogram">
+                      <!-- <img src="images/analysis_pic2.jpg"> -->
+                    </div>
+                    <div class="chart-left">
+                        <!-- <h2 class="chart_name">城市</h2> -->
+                        <div class="cityLine"></div>
+                        <!-- <img src="images/analysis_pic3.jpg"> -->
+						<!--
+                        <div class="tab">
+                            <ul>
+                                <li class="active"><img src="images/business_tab-icon1.png"></li>
+                                <li><img src="images/business_tab-icon2.png"></li>
+                            </ul>
+                        </div>
+						-->
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="w textData">
+            <div class="hot_l" id="main_map" style="height:400px;width:500px; border-style: solid; border-width: 1px; border-color:#aaa">
+                <h3 class="pub-tit-txt">热度溯源</h3>
+                <div class="hot_img">
+                    <img src="images/report_pic4.jpg"/>
+                </div>
+            </div>
+            <div class="hot_r"><!-- class="hot_r" -->
+                <h3 class="pub-tit-txt">溯源摘要</h3>
+                <div class="clear"></div>
+                <div class="summary">
+                 
+                </div>
+             <!-- 页码 -->
+            <div class="page">
+                <ul class="pageWrap">
+                    <p class="totals">共&nbsp;<span class="pageAccount">0</span>&nbsp;条</p>
+                    <select class="show_page">
+                        <option value="10" selected="selected">10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                    <p class="pageSetting up">上一页</p>
+                    <ul class="pageCont">
+                        <div class="pageWidth">
+                             <li class="pageItem on next" data_index="true">1</li>
+                            <li class="pageItem">2</li>
+                            <li class="pageItem">3</li>
+                            <li class="pageItem">4</li>
+                            <li class="pageItem">5</li>
+                        </div>
+                       
+                    </ul>
+                    <p class="pageSetting next">下一页</p>
+                    <div class="goPage">
+                        <span class="goPageChat">跳转到:</span>
+                        <input type="text" name="pageNum" class="goPageNum">
+                        <span class="goPageClick">Go</span>
+                    </div>
+                </ul>
+            </div>
+                <a href="javascript:void(0)" class="more_down">更多详情请点击下载</a>
+            </div>
+        </div>
+    </div>
+    <!--alert-->
+    <div class="save_alert">
+        <div class="s_center">
+            <p class="lose"><img src="images/lose.png"/> 提交失败，请检查后重试</p>
+        </div>
+    </div>
+	<script type="text/javascript" src="js/publicObj.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.cookie.js"></script>
+  <script type="text/javascript" src="js/global.js"></script>
+  <script src="js/pickerDateRange/dateRange.js"></script>
+  <script src="js/echarts.min.js"></script>
+  <script src="js/echarts.js"></script>
+  <script src="js/analysis.js"></script>
+</body>
+</html>

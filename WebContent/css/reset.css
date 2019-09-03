@@ -1,0 +1,200 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+	display: block;
+}
+ol, ul , li{
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* Don't kill focus outline for keyboard users: http://24ways.org/2009/dont-lose-your-focus */
+a:hover, a:active {
+    outline: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {line-height: 1;  font-family: "Microsoft YaHei", "微软雅黑", Arial,Helvetica,SimSun, "宋体", "华文细黑", Heiti, "黑体", sans-serif; font-size: 14px; color: #333;"onselectstart="return false;background: #ebeff6}
+img{border:0}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+select,input{vertical-align:middle}
+a{color:#333;text-decoration:none;-webkit-tap-highlight-color: rgba(255,255,255,0.1);}
+/*
+    //禁止复制粘贴
+    -moz-user-select:none;-webkit-user-select:none;
+*/
+
+
+
+.w{
+	width: 1200px;
+	background: #fff;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	box-shadow: 0px 0px 22.32px 1.68px rgba(185, 191, 205, 0.26);
+	padding-bottom: 100px;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+.u{
+    width: 96%;
+    margin: 0 2%;
+    box-shadow: 0px 0px 22.32px 1.68px rgba(185, 191, 205, 0.26);
+    display: inline-block;
+    background: #fff;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+/*head------------start*/
+.head{
+	width: 100%;
+	min-width: 1200px;
+	height: 90px;
+	background: #3b4966;
+}
+.head_wrap{
+	width: 1200px;
+	margin: 0 auto;
+}
+.head .logo{width: 170px;float: left;margin-top: 25px;}
+.head .logo img{width: 100%;display: block}
+.head .nav{width: 625px;height: 90px;margin: 0 auto}
+.head .nav ul{width: 100%;display: inline-block}
+.head .nav ul li{float: left;width: 125px;text-align: center;line-height: 90px;font-size: 18px;}
+.head .nav ul li a{display: block;color: #fff;}
+.head .nav ul li.on{border-bottom: 6px solid #6aaeed;background: #4f628a;line-height: normal}
+.head .nav ul li.on span{padding: 33px 0 27px 0;display: block;}
+.head .opa{float: right;display: inline-block}
+.head .opa .user{
+	color: #fff;
+	font-size: 12px;
+	display: block;
+	margin-top: 26px;
+	float: left;
+	line-height: 41px;
+	border-right: 1px solid #c5c9d2;
+	padding-right: 30px;
+}
+.head .opa .user img{vertical-align: middle;margin-right: 20px;}
+.head .opa .out{padding-left: 30px;padding-right: 0;border-right: none}
+/*head--------------end*/
+/*button*/
+.operate{
+	width: 100%;
+	padding-top: 30px;
+	display: inline-block;
+}
+.operate .b_btn{
+	display: block;
+	padding: 0 28px;
+	height: 28px;
+	background: #00a8ff;
+	color: #fff;
+	text-align: center;
+	line-height: 28px;
+	border: 1px solid #019fe9;
+	-webkit-border-radius: 1px;
+	-moz-border-radius: 1px;
+	border-radius: 1px;
+	float: left;
+	margin-right: 25px;
+}
+.operate .return{border: 1px solid #e6eaef;background: #fff;color: #5e71a0}
+/*面包屑*/
+.bread{
+	width: 96%;
+	padding: 0 2%;
+	height: 88px;
+	background: #fff;
+	box-shadow: 0px 0px 22.32px 1.68px rgba(185, 191, 205, 0.26);
+}
+.bread ul{width: 1200px;line-height: 88px;overflow: hidden;margin: 0 auto}
+.bread ul li{
+	float: left;
+	margin-right: 15px;
+	font-size: 16px;
+}
+.bread ul li.bread{font-size: 18px;}
+.bread ul li a{color: #5e71a0}
+.bread ul li.terrace a{color: #666;}
+.bread ul li .icon{
+	display: block;
+	width: 9px;
+	height: 15px;
+	background: url("../images/bread_r.png") no-repeat left center;
+	margin-right: 12px;
+	margin-top: 37px;
+	float: left;
+}
+/*alert*/
+.save_alert{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: rgba(0,0,0,0.6);
+	display: none;
+}
+.save_alert .s_center{
+	width: 450px;
+	height: 120px;
+	background: #fff;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin: 0 auto;
+	margin-top: 300px;
+	line-height: 120px;
+	text-align: center;
+	font-size: 16px;
+}
+.save_alert .s_center img{width: 37px;vertical-align: middle;margin-right: 15px;}
+/*.save_alert .s_center .lose{display: none}*/
+/*date*/
+.date_demo::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color: #5e71a0; opacity:1;
+}
+.date_demo::-webkit-input-placeholder{
+	color: #5e71a0;opacity:1;
+}
+.date_demo:-ms-input-placeholder{
+	color: #5e71a0;opacity:1;
+}

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head class="outHtml">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>searchin-商情报告</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/business_report.css"/>
+    <link rel="stylesheet" type="text/css" href="js/My97DatePicker/skin/WdatePicker.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="component">
+            <div class="head">
+                <div class="head_wrap">
+                    <div class="opa">
+                    <a href="javascript:void(0)" class="user"><img src="images/head_icon.png"/><span class="userName" id='userNameId'></span></a>
+                        <a href="javascript:void(0)" class="user out"><img src="images/head_out.png"/> 退出登录</a>
+                    </div>
+                    <div class="logo"><a href="report.html"><img src="images/logo.png"/> </a> </div>
+                    <div class="nav">
+                        <ul>
+                            <li><a href="report.html"><span>分析汇报</span></a> </li>
+                            <li><a href="analysis.html"><span>溯源分析</span></a> </li>
+                            <li class="on"><a href="business_report.html"><span>商情报告</span></a> </li>
+                            <li><a href="monitor_platform.html"><span>监测平台</span></a> </li>
+                            <li><a href="set.html"><span>系统管理</span></a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--面包屑-->
+            <div class="kong"></div>
+            <div class="bread">
+                <ul>
+                    <div class="left_topic">
+                        <div class="topic">
+                            <span>话题切换<img src="images/b_icon.png"></span>
+                        </div>
+                        <div class="switch">
+                            <div class="switch_radio">
+                            </div>
+                            <div class="edit_opa">
+                                <a href="javascript:void(0)" class="opa submit topicSubmit">提交</a>
+                                <a href="javascript:void(0)" class="opa cancel">取消</a>
+                            </div>
+                        </div>
+                        <p class="showTopic">请创建话题</p>
+                        <div id="selectData"></div>
+                        <div class="selectDataCont">
+                        	<div class="report reportPosition">报告查询：</div>
+                            <div class="dateCont"></div>
+                            <img class="selectImg" src="images/b_icon.png"/>
+                        </div>
+                    </div>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+    				<input type="button" class="report-download" value="下载">
+    				<input type="button" class="report-transpond" value="转发">
+                    <!--<div href="business_report_edit.html" class="editprestored-btn">编辑已存草稿</div>-->
+                    <div href="business_report_edit.html" class="editbefore-btn">编辑当前报告</div>
+               </ul>
+            </div>
+            <div class="wrapCont">
+                <div class="w">
+                    <div class="busin-main">
+                        <img src="images/business_pic1.jpg">
+                        <h2 class="margintop35">综述</h2>
+                        <p>思奇无限 聚合商情效能 释放数据价值</p>
+                    </div>
+                </div>
+                <div class="w wPic">
+                    <div class="busin-main">
+                        <h2>图表</h2>
+                        <div class="picCont">
+                            <div class="pic_1">
+                                <div class="Publication_trend picItem hide">
+                                    <img src="images/Publication_trend.png" >
+                                </div>
+                                <div class="Publication_trend editLinearChar"></div>
+                                <label class="replace1 picButton delteCont hide" for="replace11">
+                                    <span class="chart">替换</span>
+                                    <input class="picInput hide" type="file" id="replace11">
+                                </label>
+                                <div class="delete1 picButton delteCont hide">删除</div>
+                            </div>
+                            <div class="pic_2">
+                                <div class="Media_type_release_statistics picItem hide">
+                                    <img src="images/Media_type_release_statistics.png" style="width: 520px; height: 360px;">
+                                </div>
+                                <div class="Media_type_release_statistics mediaType"></div>
+                                <label class="replace picButton delteCont hide" for="replace1">
+                                    <span class="chart">替换</span>
+                                    <input class="picInput hide" type="file" id="replace1">
+                                </label>
+                                <div class="delete picButton delteCont hide">删除</div>
+                            </div>
+                            <div class="pic_2">
+                                <div class="Baidu_media_type picItem hide">
+                                    <img src="images/Baidu_media_type.png" style="width: 400px; height: 360px;">
+                                </div>
+                                <div class="Baidu_media_type editBaiduType"></div>
+                                <label class="replace picButton delteCont hide" for="replace2">
+                                    <span class="chart">替换</span>
+                                    <input class="picInput hide" type="file" id="replace2">
+                                </label>
+                                <div class="delete picButton delteCont hide">删除</div>
+                            </div>
+                            <div class="pic_2">
+                                <div class="City_level_statistics picItem hide">
+                                    <img src="images/City_level_statistics.png" style="width: 520px; height: 360px;">
+                                </div>
+                                <div class="City_level_statistics cityType"></div>
+                                <label class="replace picButton delteCont hide" for="replace3">
+                                    <span class="chart">替换</span>
+                                    <input class="picInput hide" type="file" id="replace3">
+                                </label>
+                                <div class="delete picButton delteCont hide">删除</div>
+                            </div>
+                            <div class="pic_2">
+                                <div class="Regional_heat_map picItem hide">
+                                    <img src="images/Regional_heat_map.png" style="width: 520px; height: 360px;">
+                                </div>
+                                <div class="Regional_heat_map pieAreaType"></div>
+                                <label class="replace picButton delteCont hide" for="replace4">
+                                    <span class="chart">替换</span>
+                                    <input class="picInput hide" type="file" id="replace4">
+                                </label>
+                                <div class="delete picButton delteCont hide">删除</div>
+                            </div>
+                            <div class="pic_2">
+                                <div class="Emotional_type_scale picItem hide">
+                                    <img src="images/Mood_type_trend_chart.png" style="width: 520px; height: 360px;">
+                                </div>
+                                <div class="Emotional_type_scale emotionType"></div>
+                                <label class="replace picButton delteCont hide" for="replace6">
+                                    <span class="chart">替换</span>
+                                    <input class="picInput hide" type="file" id="replace6">
+                                </label>
+                                <div class="delete picButton delteCont hide">删除</div>
+                            </div>
+                            <div class="pic_2">
+                                <div class="Mood_type_trend_chart picItem hide">
+                                    <img src="images/Emotional_type_scale.png" style="width: 520px; height: 360px;">
+                                </div>
+                                <div class="Mood_type_trend_chart emotionMediaType"></div>
+                                <label class="replace picButton delteCont hide" for="replace5">
+                                    <span class="chart">替换</span>
+                                    <input class="picInput hide" type="file" id="replace5">
+                                </label>
+                                <div class="delete picButton delteCont hide">删除</div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w">
+                    <div class="busin-main">
+                        <h2><!--<div class="pub-download"><em class="pub-download-icon"></em>下载</div>-->新闻详情</h2>
+                        <div class="busin-content businNew">
+                        	<!--
+                            <div class="busin-cont">
+                                <div class="busin-title">
+                                    <span class="number">01</span>
+                                    <span class="wa-text go"><a class="waTextLink" href="" target="_blank">新闻名称</a> </span>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="busin-top">
+                                    <span class="bus-text">转载收录统计：  </span>
+                                    <div class="bus-box">
+                                        <h3>0篇</h3>
+                                        <p>总转载量</p>
+                                    </div>
+                                    <div class="bus-box">
+                                        <h3>0家</h3>
+                                        <p>百度新闻收录</p>
+                                    </div>
+                                    <span class="bus-text marginleft65">主要收录媒体： 新浪、网易、北京日报、新京报、环球网、中华网</span>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="busin-cont margintop20">
+                                <div class="busin-title">
+                                    <span class="number">02</span>
+                                    <span class="wa-text"><a href="http://www.qq.com/" target="view_window">陈欧再投1亿美金豪赌充电宝；乐视体育B+轮融资估值240亿；人类五位棋手遭阿尔法狗团灭；</a></span>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="busin-top">
+                                    <span class="bus-text">转载收录统计：  </span>
+                                    <div class="bus-box">
+                                        <h3>18篇</h3>
+                                        <p>总转载量</p>
+                                    </div>
+                                    <div class="bus-box">
+                                        <h3>10家</h3>
+                                        <p>百度新闻收录</p>
+                                    </div>
+                                    <span class="bus-text marginleft65">主要收录媒体：  新浪、网易、北京日报、新京报、环球网、中华网 </span>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="busin-cont margintop20">
+                                <div class="busin-title">
+                                    <span class="number">03</span>
+                                    <span class="wa-text"><a href="http://www.qq.com/" target="view_window">陈欧再投1亿美金豪赌充电宝；乐视体育B+轮融资估值240亿；人类五位棋手遭阿尔法狗团灭；</a></span>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="busin-top">
+                                    <span class="bus-text">转载收录统计：  </span>
+                                    <div class="bus-box">
+                                        <h3>18篇</h3>
+                                        <p>总转载量</p>
+                                    </div>
+                                    <div class="bus-box">
+                                        <h3>10家</h3>
+                                        <p>百度新闻收录</p>
+                                    </div>
+                                    <span class="bus-text marginleft65">主要收录媒体：  新浪、网易、北京日报、新京报、环球网、中华网 </span>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="busin-cont margintop20">
+                                <div class="busin-title">
+                                    <span class="number">04</span>
+                                    <span class="wa-text"><a href="http://www.qq.com/" target="view_window">陈欧再投1亿美金豪赌充电宝；乐视体育B+轮融资估值240亿；人类五位棋手遭阿尔法狗团灭；</a></span>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="busin-top">
+                                    <span class="bus-text">转载收录统计：  </span>
+                                    <div class="bus-box">
+                                        <h3>18篇</h3>
+                                        <p>总转载量</p>
+                                    </div>
+                                    <div class="bus-box">
+                                        <h3>10家</h3>
+                                        <p>百度新闻收录</p>
+                                    </div>
+                                    <span class="bus-text marginleft65">主要收录媒体：  新浪、网易、北京日报、新京报、环球网、中华网 </span>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            -->
+                        </div>
+                    </div>
+                    <!-- 页码 -->
+                    <!--
+                    <div class="page">
+                        <ul class="pageWrap">
+                            <p class="totals">共&nbsp;<span class="pageAccount">0</span>&nbsp;条</p>
+                            <select class="show_page">
+                                <option value="10" selected="selected">10</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                            <p class="pageSetting up">上一页</p>
+                            <ul class="pageCont">
+                                <div class="pageWidth">
+                                    <li class="pageItem on next" data_index="true">1</li>
+                                    <li class="pageItem">2</li>
+                                    <li class="pageItem">3</li>
+                                    <li class="pageItem">4</li>
+                                    <li class="pageItem">5</li>
+                                </div>
+                            
+                            </ul>
+                            <p class="pageSetting next">下一页</p>
+                            <div class="goPage">
+                                <span class="goPageChat">跳转到:</span>
+                                <input type="text" name="pageNum" class="goPageNum">
+                                <span class="goPageClick">Go</span>
+                            </div>
+                        </ul>
+                    </div>
+                    -->
+                </div>
+                <div class="w">
+                    <div class="busin-main">
+                        <h2><!--<div class="pub-download"><em class="pub-download-icon"></em>下载</div>-->新闻截图</h2>
+                        <div class="busin-content">
+                            <div class="busin-cont">
+                                <div class="bus-title">
+                                    <p>截图名称</p>
+                                </div>
+                                <div class="busin-top">
+                                    <img src="images/business_pic6.jpg">
+                                </div>
+                            </div>
+                            
+                            <!--
+                            <div class="busin-cont">
+                                <div class="bus-title">
+                                    <p>新浪首页banner</p>
+                                </div>
+                                <div class="busin-top">
+                                    <img src="images/business_pic7.jpg">
+                                </div>
+                            </div>
+                            
+                            <div class="busin-cont">
+                                <div class="bus-title">
+                                    <p>新浪首页banner</p>
+                                </div>
+                                <div class="busin-top">
+                                    <img src="images/business_pic8.jpg">
+                                </div>
+                            </div>
+                            -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<script type="text/javascript" src="js/publicObj.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="js/global.js"></script> -->
+    <script type="text/javascript" src="js/My97DatePicker/WdatePicker.js"></script>
+	<script type="text/javascript" src="js/echarts.min.js"></script>
+	<!-- <script type="text/javascript" src="laydate/laydate.js"></script> -->
+	<script type="text/javascript" src="js/business_report.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>searchin-检测平台-编辑</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/edit.css"/>
+</head>
+<body>
+    <div class="wrap">
+        <div class="head">
+            <div class="head_wrap">
+                <div class="opa">
+                    <a href="javascript:void(0)" class="user"><img src="images/head_icon.png"/> <span class="userName" id='userNameId'>ADMIN</span></a>
+                    <a href="javascript:void(0)" class="user out"><img src="images/head_out.png"/> 退出登录</a>
+                </div>
+                <div class="logo"><a href="report.html"><img src="images/logo.png"/> </a> </div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="report.html"><span>分析汇报</span></a> </li>
+                        <li><a href="analysis.html"><span>溯源分析</span></a> </li>
+                        <li><a href="business_report.html"><span>商情报告</span></a> </li>
+                        <li class="on"><a href="monitor_platform.html"><span>监测平台</span></a> </li>
+                        <li><a href="set.html"><span>系统管理</span></a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="editCont">
+            <!--面包屑-->
+            <div class="bread">
+                <ul>
+                    <li class="terrace"><a href="monitor_platform.html">监测平台</a> </li>
+                    <li><span class="icon"></span><a href="javascript:void(0)">新建话题</a> </li>
+                </ul>
+            </div>
+            <div class="w">
+                <div class="edit">
+                    <div class="fill_in">
+                        <div class="f_m">
+                            <dl>
+                                <dt>话题名称：<span>*</span></dt>
+                                <dd><input type="text" class="ar_name"/></dd>
+                            </dl>
+                        </div>
+                        <div class="f_m">
+                            <p class="monitor">
+                                <label><input type="radio" name="media" data_id="0" checked="checked" class="radio"/>全媒体监测</label>
+                                <label><input type="radio" name="media" data_id="1" class="radio"/>指定媒体监测</label>
+                            </p>
+                        </div>
+                        <div class="f_m">
+                            <dl class="keyword">
+                                <dt>关键字：<span>*</span></dt>
+                                <dd><a href="javascript:void(0)" class="copy">复制已有话题关键字</a> </dd>
+                            </dl>
+                            <textarea class="copy_keyword codeTopicKey"></textarea>
+                        </div>
+                        <div class="f_m">
+                            <dl class="come">
+                                <dt>显示增量来源：<span>*</span></dt>
+                            </dl>
+                            <textarea class="copy_keyword re_w copeSiteName"></textarea>
+                        </div>
+                        <div class="operate">
+                            <a href="javascript:void(0)" class="b_btn save editSava">保存</a>
+                            <a href="monitor_platform.html" class="b_btn return">取消并返回</a>
+                        </div>
+                    </div>
+                    <div class="font_describe">
+                        <div class="describe describeResource">
+                            <div class="de_tit">来源种类</div>
+                            <div class="resourceCont">
+                               
+                            </div>
+                            
+                        </div>
+                        <div class="describe">
+                            <div class="de_tit">地域</div>
+                            <div class="areaCont">
+                               
+                            </div>
+                        </div>
+                        <div class="describe">
+                            <div class="de_tit">语言</div>
+                            <div class="languageCont">
+                               
+                            </div>
+                        </div>
+                        <div class="operate">
+                            <a href="javascript:void(0)" class="b_btn updateSearchBtn">更改搜索设置</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="updateSearchCont hide">
+            <!--面包屑-->
+            <div class="bread">
+                <ul>
+                    <li class="terrace">
+                        <a href="monitor_platform.html">监测平台</a>
+                    </li>
+                    <li>
+                        <span class="icon"></span>
+                        <a href="edit.html">新建话题</a>
+                    </li>
+                    <li>
+                        <span class="icon"></span>
+                        <a href="javascript:void(0)">搜索设置</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="w">
+                <div class="model f_model modelSpecies publicCont">
+                    <div class="m_tit">来源种类：</div>
+                    <div class="m_cont modelSpeciesCont">
+                    </div>
+                </div>
+                <div class="model modelArea publicCont">
+                    <div class="m_tit">地域：</div>
+                    <div class="m_cont modelAearCont">
+                    </div>
+                </div>
+                <div class="model modelLanguage">
+                    <div class="m_tit">语言：</div>
+                    <div class="m_cont">
+                        <div class="check">
+                           <div class="optionAll option" ucd_id="0">
+                                <p>
+                                    <span class="optionInfo">不限</span>
+                                    <span class="close"></span>
+                                </p>
+                            </div>
+                        </div>
+                    <div class="classify reset">
+                       <p class="otherItem allCheck" ucd_id="0">
+                            <a href="javascript:void(0)" class="limitOption">不限</a>
+                        </p>
+                        <ul>
+                            <li class="otherItem" ucd_id="1">
+                                <a href="javascript:void(0)">中文（47）</a>
+                            </li>
+                            <li class="otherItem" ucd_id="2">
+                                <a href="javascript:void(0)">英文（47）</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="w">
+        <div class="model site_name">
+            <div class="searchSelectCont hide">
+                <div class="m_tit">网站名称:</div>
+                <div class="m_cont selectedContainer">
+                    
+                </div>
+            </div>
+            <div class="m_tit"></div>
+            <div class="m_cont">
+                <input type="text" class="name searchInput" placeholder="test001"/>
+                <a href="javascript:void(0)" class="search">搜索</a>
+            </div>
+        </div>
+        <div class="model site_name result hide">
+            <div class="m_tit">搜索结果列表：</div>
+            <div class="m_cont">
+                <table border="1">
+                    <thead>
+                         <tr>
+                            <th class="searchHeadList">
+                                <input type="checkbox" class="searchHeadCheckbox">
+                            </th>
+                            <th class="searchHeadList">网站名称</th>
+                            <th class="searchHeadList">来源种类</th>
+                            <th class="searchHeadList">地域设置</th>
+                            <th class="searchHeadList">语言</th>
+                        </tr>
+                    </thead>
+                    <tbody class="searchListCont">
+                        <tr class="searchListTr">
+                             <td class="searchBodyList">
+                                <input type="checkbox" class="searchBodyCheckbox">
+                            </td>
+                            <td class="searchBodyList">1</td>
+                            <td class="searchBodyList">2</td>
+                            <td class="searchBodyList">3</td>
+                            <td class="searchBodyList">4</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 页码 -->
+                <div class="page">
+                    <ul class="pageWrap">
+                        <p class="totals">共&nbsp;<span class="pageAccount">80</span>&nbsp;条</p>
+                        <select class="show_page">
+                            <option value="10" selected="selected">10</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                        <p class="pageSetting up">上一页</p>
+                        <ul class="pageCont">
+                            <div class="pageWidth">
+                                 <li class="pageItem on next" data_index="true">1</li>
+                                <li class="pageItem">2</li>
+                                <li class="pageItem">3</li>
+                                <li class="pageItem">4</li>
+                                <li class="pageItem">5</li>
+                            </div>
+                           
+                        </ul>
+                        <p class="pageSetting next">下一页</p>
+                        <div class="goPage">
+                            <span class="goPageChat">跳转到:</span>
+                            <input type="text" name="pageNum" class="goPageNum">
+                            <span class="goPageClick">Go</span>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="operate">
+            <a href="javascript:void(0)" class="b_btn save searchSave">保存</a>
+            <a href="javascript:void(0)" class="b_btn searchBack">重置</a>
+            <a href="edit.html" class="b_btn return">取消并返回</a>
+        </div>
+    </div>
+</div>
+    <div class="save_alert save_a">
+        <div class="s_center">
+            <p class="lose"><img src="images/lose.png"> 保存失败，请检查网络</p>
+        </div>
+    </div>
+    <div class="save_alert copy_a">
+        <div class="s_center">
+            <div class="toplicCont">
+                    <label class="topicList">
+                      <input type="radio" name="topicListItem" class="topicListItem" checked="checked">
+                      <span class="topicListText">fasdf</span>
+                    </label>
+            </div>
+            <div class="copyBtn">
+                <div class="copySureBtn">确定</div>
+                 <div class="copyCancleBtn">取消</div>
+            </div>
+        </div>
+   
+    </div>
+</div>
+	<script type="text/javascript" src="js/publicObj.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="js/global.js"></script> -->
+	<script type="text/javascript" src="js/edit.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script>
+
+</script>
+</body>
+</html>
